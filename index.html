@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<h1>Calculator</h1>
+<script>
+
+
+function fun(x){
+
+//str=f1.input.value.................for 2nd del method need to define the string
+if(x=='='){
+
+f1.input.value=eval(f1.input.value)
+}
+else if(x=='B'){
+f1.input.value=f1.input.value.slice(0,-1)
+//f1.input.value=str.substr(0,str.length-1)....................2nd method for del button
+}
+
+else{
+f1.input.value+=x
+}
+}
+</script>
+
+<style>
+
+
+*{
+margin:auto;
+}
+body{
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,64,1) 35%, rgba(0,212,255,1) 100%);
+
+}
+
+
+h1{
+text-align:center;
+color:yellow;
+}
+
+
+.a1{
+height:50px;
+width:200px;
+background-color:white;
+color:black;
+margin-top:15px;
+}
+
+
+.c1{
+margin-left:5px;
+height:40px;
+width:40px;
+background-color:black;
+color:#E5E4E2	;
+box-shadow:0px 0px 2px 3px;
+}
+
+.c2 {
+margin-left:5px;
+height:40px;
+width:57px;
+background-color:black;
+color:orange;
+
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+<form   name='f1'>
+<table style="background-color:gray;">
+<tr>
+<td>
+<fieldset>
+
+
+<input class="a1" type='text' name='input'/><br><br>
+
+<input class="c1" type='button' value='1' onclick="fun(1)"/>
+<input class="c1" type='button' value='2' onclick="fun(2)"/>
+<input class="c1" type='button' value='3' onclick="fun(3)"/>
+<input class="c1"  type='button' value='+' onclick="fun('+')"/>
+<br><br>
+
+<input class="c1" type='button' value='4' onclick="fun(4)"/>
+<input class="c1" type='button' value='5' onclick="fun(5)"/>
+<input class="c1" type='button' value='6' onclick="fun(6)"/>
+<input class="c1"  type='button' value='-' onclick="fun('-')"/>
+<br><br>
+
+<input class="c1" type='button' value='7' onclick="fun(7)"/>
+<input class="c1" type='button' value='8' onclick="fun(8)"/>
+<input class="c1" type='button' value='9' onclick="fun(9)"/>
+<input class="c1"  type='button' value='*' onclick="fun('*')"/>
+<br><br>
+<input class="c1"  type='button' value='%' onclick="fun('%')"/>
+<input class="c1"  type='button' value='0' onclick="fun(0)"/>
+<input class="c1"  type='button' value='.' onclick="fun('.')"/>
+<input class="c1"  type='button' value='/' onclick="fun('/')"/>
+
+
+<br><br>
+
+<input class="c2" type='reset' value='AC' />
+<input class="c2" type='button' value='=' onclick="fun('=')"/>
+<input class="c2"  type="button" value="del" onclick="fun('B')"></input>
+
+
+
+
+</fieldset>
+</td>
+</tr>
+</table>
+
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
