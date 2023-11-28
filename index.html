@@ -1,92 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
 
 <head>
 <h1>Calculator</h1>
-<script>
-
-
-function fun(x){
-
-//str=f1.input.value.................for 2nd del method need to define the string
-if(x=='='){
-
-f1.input.value=eval(f1.input.value)
-}
-else if(x=='B'){
-f1.input.value=f1.input.value.slice(0,-1)
-//f1.input.value=str.substr(0,str.length-1)....................2nd method for del button
-}
-
-else{
-f1.input.value+=x
-}
-}
-</script>
 
 <style>
-
-
 *{
 margin:auto;
 }
 body{
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,64,1) 35%, rgba(0,212,255,1) 100%);
-
 }
-
+.Table{
+    background-color: gray;
+    height: 600px;
+    width: 28%;
+}
 
 h1{
 text-align:center;
 color:yellow;
 }
-
+.fset{
+    height: 95%;
+    width: 85%;
+}
 
 .a1{
-height:50px;
-width:200px;
+height:15%;
+width:97%;
 background-color:white;
 color:black;
 margin-top:15px;
+margin-right: 10;
+font-size: larger;
+font-weight: 700;
 }
-
 
 .c1{
 margin-left:5px;
-height:40px;
-width:40px;
+height:12%;
+width:20%;
 background-color:black;
 color:#E5E4E2	;
 box-shadow:0px 0px 2px 3px;
+margin-right:2.5%;
+font-size: larger;
+font-weight: 700;
 }
 
 .c2 {
-margin-left:5px;
-height:40px;
-width:57px;
+ margin-left:5px;
+height:12%;
+width:20%;
 background-color:black;
-color:orange;
-
+color: orange;
+margin-right:2.5%;
+font-size: larger;
+font-weight: 700;
 }
-
-
-
 
 
 
 </style>
-
-
-
-
+<script>
+    function fun(x){
+    
+    //str=f1.input.value.................for 2nd del method need to define the string
+    if(x=='='){
+    f1.input.value=eval(f1.input.value)
+    }
+    else if(x=='B'){
+    f1.input.value=f1.input.value.slice(0,-1)
+    //f1.input.value=str.substr(0,str.length-1)....................2nd method for del button
+    }
+    
+    else{
+    f1.input.value+=x
+    }
+    }
+    </script>
+    
 </head>
 <body>
 
-
 <form   name='f1'>
-<table style="background-color:gray;">
+<table class="Table">
 <tr>
 <td>
-<fieldset>
+<fieldset class="fset">
 
 
 <input class="a1" type='text' name='input'/><br><br>
@@ -113,30 +119,18 @@ color:orange;
 <input class="c1"  type='button' value='.' onclick="fun('.')"/>
 <input class="c1"  type='button' value='/' onclick="fun('/')"/>
 
-
 <br><br>
 
 <input class="c2" type='reset' value='AC' />
 <input class="c2" type='button' value='=' onclick="fun('=')"/>
-<input class="c2"  type="button" value="del" onclick="fun('B')"></input>
-
-
-
-
+<input class="c2" type="button" value="del" onclick="fun('B')"/>
+<input class="c2"  type="button" value=" "/>
 </fieldset>
 </td>
 </tr>
 </table>
 
 </form>
-
-
-
-
-
-
-
-
 
 </body>
 
